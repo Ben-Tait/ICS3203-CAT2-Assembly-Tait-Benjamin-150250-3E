@@ -46,22 +46,19 @@ Each task has been carefully implemented and commented on to demonstrate the usa
    nasm -f elf64 -o task1.o task1.asm
    ld -s -o task1 task1.o
    ./task1
-For Task 2 (Array Manipulation with Looping and Reversal):
+### For Task 2 (Array Manipulation with Looping and Reversal):
 
-bash
-Copy code
+```bash
 nasm -f elf64 -o task2.o task2.asm
 ld -s -o task2 task2.o
 ./task2
 For Task 3 (Modular Program with Subroutines for Factorial Calculation):
-
 bash
 Copy code
 nasm -f elf64 -o task3.o task3.asm
 ld -s -o task3 task3.o
 ./task3
 For Task 4 (Data Monitoring and Control Using Port-Based Simulation):
-
 bash
 Copy code
 nasm -f elf64 -o task4.o task4.asm
@@ -69,6 +66,7 @@ ld -s -o task4 task4.o
 ./task4
 Running the Program:
 After compiling, run each program using ./taskX, where X is the task number (e.g., task1 for Task 1).
+
 Insights and Challenges Encountered
 Task 1: Control Flow and Conditional Logic
 Challenges: Understanding the correct use of conditional and unconditional jumps was key to ensuring the program flows correctly. I had to pay close attention to the conditions to classify the input number as positive, negative, or zero.
@@ -82,7 +80,5 @@ Insight: Using subroutines in assembly is an excellent way to break down complex
 Task 4: Data Monitoring and Control Using Port-Based Simulation
 Challenges: Simulating sensor input and controlling the motor/alarm status based on varying conditions was a bit challenging. I had to understand how to simulate the sensor value and how changes in the status variables reflect on the system's behavior.
 Insight: This task provided insight into how low-level systems interact with hardware components, and how simple sensors can trigger various control actions in embedded systems.
-
 Conclusion
 These tasks provided invaluable experience in working with assembly language, highlighting its use in manipulating control flow, memory, and registers. The exercises challenged my understanding of low-level system programming and gave me hands-on experience in managing hardware-like behavior and control mechanisms.
-
