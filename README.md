@@ -14,8 +14,6 @@ This repository contains solutions for the **ICS3203 CAT2 Assembly** tasks, whic
 
 - **Insights**: Mastery of control flow operations in assembly (such as conditional jumps) is critical in managing program behavior based on dynamic conditions.
 
----
-
 ### Task 2: Array Manipulation with Looping and Reversal
 
 - **Objective**: Implement a program that:
@@ -27,8 +25,6 @@ This repository contains solutions for the **ICS3203 CAT2 Assembly** tasks, whic
 
 - **Insights**: Working with arrays in assembly gives a deeper understanding of memory addressing and pointer arithmetic. The challenge lies in reversing the array without overwriting elements prematurely.
 
----
-
 ### Task 3: Modular Program with Subroutines for Factorial Calculation
 
 - **Objective**: Develop a program that:
@@ -39,8 +35,6 @@ This repository contains solutions for the **ICS3203 CAT2 Assembly** tasks, whic
 - **Key Challenges**: Managing the stack correctly to preserve and restore registers when calling and returning from the subroutine.
 
 - **Insights**: This task enhanced my understanding of modular programming in assembly and the importance of the stack for preserving state across subroutine calls. It also improved my knowledge of low-level memory management.
-
----
 
 ### Task 4: Data Monitoring and Control Using Port-Based Simulation
 
@@ -55,21 +49,65 @@ This repository contains solutions for the **ICS3203 CAT2 Assembly** tasks, whic
 
 - **Insights**: This task provided insight into how low-level systems interact with hardware components and how simple sensors can trigger various control actions in embedded systems.
 
----
-
 ## Compilation and Execution
 
 For each task, the process of compiling and running the program involves the following steps:
 
-### 1. Compiling:
+### 1. Compiling
 Use the `nasm` assembler to compile the assembly code into an object file for a 64-bit system. Then, link the object file using the `ld` linker to produce an executable.
 
 Example commands:
 
-- For **Task 1** (Control Flow and Conditional Logic):
-  ```bash
-  nasm -f elf64 -o task1.o task1.asm
-  ld -s -o task1 task1.o
+#### For Task 1 (Control Flow and Conditional Logic):
+```bash
+nasm -f elf64 -o task1.o task1.asm
+ld -s -o task1 task1.o
+```
 
+#### For Task 2 (Array Manipulation with Looping and Reversal):
+```bash
+nasm -f elf64 -o task2.o task2.asm
+ld -s -o task2 task2.o
+```
 
-- For **Task 1** (Control Flow and Conditional Logic):
+#### For Task 3 (Factorial Calculation):
+```bash
+nasm -f elf64 -o task3.o task3.asm
+ld -s -o task3 task3.o
+```
+
+#### For Task 4 (Data Monitoring and Control):
+```bash
+nasm -f elf64 -o task4.o task4.asm
+ld -s -o task4 task4.o
+```
+
+### 2. Running the Program
+After compiling, run each program using the following command:
+
+```bash
+./taskX
+```
+Replace X with the task number (e.g., `task1` for Task 1).
+
+## Insights and Challenges
+
+### Task 1: Control Flow and Conditional Logic
+- **Challenges**: Understanding the correct use of conditional and unconditional jumps (`jg`, `jl`, `je`) was crucial to ensure that the program correctly classifies the number.
+- **Insights**: Effective use of jump instructions is fundamental for implementing control flow in assembly language.
+
+### Task 2: Array Manipulation with Looping and Reversal
+- **Challenges**: Reversing the array in place without using additional memory required careful manipulation of indices to avoid overwriting elements prematurely.
+- **Insights**: Working with arrays directly in assembly provided a deeper understanding of memory addressing and pointer arithmetic.
+
+### Task 3: Modular Program with Subroutines for Factorial Calculation
+- **Challenges**: Managing the stack to preserve registers during subroutine calls was initially complex, requiring careful handling to ensure registers are restored properly.
+- **Insights**: Subroutines in assembly improve modularity and code reusability. The stack's role in saving registers is crucial for maintaining the program's state during function calls.
+
+### Task 4: Data Monitoring and Control Using Port-Based Simulation
+- **Challenges**: Simulating sensor input and controlling the system's motor and alarm status based on the sensor value was tricky.
+- **Insights**: This task provided practical insight into how low-level systems interact with hardware components and trigger control actions based on sensor data.
+
+## Conclusion
+
+These tasks provided invaluable experience in assembly programming, challenging me to think critically about low-level system operations, including memory manipulation, control flow, and modular code design. They also helped me understand how assembly interacts with hardware components, a key skill in embedded systems programming.
