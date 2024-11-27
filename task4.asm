@@ -157,7 +157,7 @@ atoi:
     mov     rbx, 10                 ; Multiplier (base 10)
 
 atoi_loop:
-    movzx   rcx, byte [rsi]         ; Load the next character
+    movzx   rcx, byte [rsi]         ; 
     cmp     rcx, 10                 ; Check for newline
     je      atoi_done
     sub     rcx, '0'                ; Convert ASCII to digit
