@@ -97,7 +97,7 @@ exit:
     syscall
 
 invalid_input:
-    ; Print error message and restart input loop
+  
     mov rax, 1
     mov rdi, 1
     mov rsi, invalid_input_msg
