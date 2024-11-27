@@ -6,7 +6,7 @@ section .data
     result_buffer   db 20 dup(0)         ; Buffer for result output
 
 section .bss
-    ; No uninitialized variables for this program
+  
 
 section .text
 global _start
